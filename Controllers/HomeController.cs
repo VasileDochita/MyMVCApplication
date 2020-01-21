@@ -33,17 +33,59 @@ namespace MyMVCApplication.Controllers
             return View();
         }
         [HttpPost]
-        public ActionResult Edit(Student std)
-        {
-            // update student to the database
+        //public ActionResult Edit(Student std)
+        //{
+        //    // update student to the database
 
-            return RedirectToAction("Index");
-        }
+        //    return RedirectToAction("Index");
+        //}
         [HttpDelete]
         public ActionResult Delete(int Id)
         {
             // delete student from the database whose id matches with specified id
 
+            return RedirectToAction("Index");
+        }
+        [HttpPost]
+        public ActionResult PostAction()
+        {
+            return View("Index");
+        }
+
+
+        [HttpPut]
+        public ActionResult PutAction()
+        {
+            return View("Index");
+        }
+
+        [HttpDelete]
+        public ActionResult DeleteAction()
+        {
+            return View("Index");
+        }
+
+        [HttpHead]
+        public ActionResult HeadAction()
+        {
+            return View("Index");
+        }
+
+        [HttpOptions]
+        public ActionResult OptionsAction()
+        {
+            return View("Index");
+        }
+
+        [HttpPatch]
+        public ActionResult PatchAction()
+        {
+            return View("Index");
+        }
+        
+        [AcceptVerbs(HttpVerbs.Post | HttpVerbs.Get)]
+        public ActionResult GetAndPostAction()
+        {
             return RedirectToAction("Index");
         }
     }
